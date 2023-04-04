@@ -1,0 +1,52 @@
+# 2023.swing31
+[2023 C++] 1주차(실습1)
+
+#include <iostream> //헤더파일 선언문
+using namespace std;
+
+int main() {
+
+	char name[12];// 이름 변수
+	int number; //학번 변수
+
+	cout << "이름: ";   //cout <<을 이용한 출력 std:: 생략
+	cin.getline(name, 12); //공백을 포함한 문자열 
+	cin.ignore();
+	cout << "학번: "; // 학번 입력
+	cin >> number;
+
+	cout << "반갑습니다. " << name << "님\n\n";
+	cout << "학점 입력을 시작합니다.\n" << endl;
+
+	cout << "\n================ SWING 31기 ================ \n";
+
+	float  val1; //C프로그래밍
+	float  val2; //컴퓨터및정보보호개론
+	float  val3; //소프트웨어개발실무영어
+	float  val4; //대학고급영어
+
+
+	float total; //전체학점
+
+	cout << "C프로그래밍(3학점): ";
+	cin >> val1; // cin과 >> 연산자 이용한 출력
+
+	cout << "컴퓨터및정보보호개론(3학점): ";
+	cin >> val2;
+
+	cout << "소프트웨어개발실무영어I(1학점): ";
+	cin >> val3;
+
+	cout << "대학고급영어(2학점): ";
+	cin >> val4;
+
+	cout << "==========================================\n\n";
+
+	total = (val1 * 3 + val2 * 3 + val3 * 1 + val4 * 2) / 9;
+
+	cout << name << "(" << number << " )님의 전제 학점은 " << total << "입니다.";
+
+
+	return 0;
+
+}
